@@ -7,3 +7,8 @@
 /src/NerdStore.Catalogo.Domain/obj
 /src/NerdStore.Core/bin
 /src/NerdStore.Core/obj
+/src/NerdStore.Catalog.Data/bin
+/src/NerdStore.Catalog.Data/obj
+/tests/NerdStore.Catalogo.Domain.Tests/bin
+/tests/NerdStore.Catalogo.Domain.Tests/obj
+/src/NerdStore.Catalog.Data/obj
