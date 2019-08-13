@@ -14,3 +14,5 @@
 /src/NerdStore.Catalog.Data/obj
 /src/NerdStore.Catalogo.Application/bin
 /src/NerdStore.Catalogo.Application/obj
+/src/NerdStore.WebApp.MVC/bin
+/src/NerdStore.WebApp.MVC/obj
