@@ -3,16 +3,6 @@
 ################################################################################
 
 /CleanArchitecture/.vs/
-/src/NerdStore.Catalogo.Domain/bin
-/src/NerdStore.Catalogo.Domain/obj
-/src/NerdStore.Core/bin
-/src/NerdStore.Core/obj
-/src/NerdStore.Catalog.Data/bin
-/src/NerdStore.Catalog.Data/obj
-/tests/NerdStore.Catalogo.Domain.Tests/bin
-/tests/NerdStore.Catalogo.Domain.Tests/obj
-/src/NerdStore.Catalog.Data/obj
-/src/NerdStore.Catalogo.Application/bin
-/src/NerdStore.Catalogo.Application/obj
-/src/NerdStore.WebApp.MVC/bin
-/src/NerdStore.WebApp.MVC/obj
+
+[Oo]bj/
+[Bb]in/
