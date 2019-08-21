@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace NerdStore.Catalog.Data.Migrations
+namespace NerdStore.Catalogo.Data.Migrations
 {
     public partial class Initial : Migration
     {

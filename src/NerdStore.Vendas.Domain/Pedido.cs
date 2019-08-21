@@ -1,13 +1,12 @@
-﻿using FluentValidation.Results;
-using NerdStore.Core.DomainObjects;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using FluentValidation.Results;
+using NerdStore.Core.DomainObjects;
 
 namespace NerdStore.Vendas.Domain
 {
-    public partial class Pedido : Entity, IAggregateRoot
+    public class Pedido : Entity, IAggregateRoot
     {
         public int Codigo { get; private set; }
         public Guid ClienteId { get; private set; }
@@ -161,6 +160,20 @@ namespace NerdStore.Vendas.Domain
         public void CancelarPedido()
         {
             PedidoStatus = PedidoStatus.Cancelado;
+        }
+
+        public static class PedidoFactory
+        {
+            public static Pedido NovoPedidoRascunho(Guid clienteId)
+            {
+                var pedido = new Pedido
+                {
+                    ClienteId = clienteId,
+                };
+
+                pedido.TornarRascunho();
+                return pedido;
+            }
         }
     }
 }

@@ -4,10 +4,9 @@ using NerdStore.Core.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace NerdStore.Catalog.Data.Repository
+namespace NerdStore.Catalogo.Data.Repository
 {
     public class ProdutoRepository : IProdutoRepository
     {
@@ -17,7 +16,6 @@ namespace NerdStore.Catalog.Data.Repository
         {
             _context = context;
         }
-
         public IUnitOfWork UnitOfWork => _context;
 
         public async Task<IEnumerable<Produto>> ObterTodos()
@@ -27,7 +25,8 @@ namespace NerdStore.Catalog.Data.Repository
 
         public async Task<Produto> ObterPorId(Guid id)
         {
-            return await _context.Produtos.AsNoTracking().FirstOrDefaultAsync(p => p.Id == id);
+            //return await _context.Produtos.AsNoTracking().FirstOrDefaultAsync(p => p.Id == id);
+            return await _context.Produtos.FindAsync(id);
         }
 
         public async Task<IEnumerable<Produto>> ObterPorCategoria(int codigo)
