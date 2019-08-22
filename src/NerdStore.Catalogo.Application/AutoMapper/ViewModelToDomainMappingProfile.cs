@@ -1,9 +1,6 @@
 ﻿using AutoMapper;
 using NerdStore.Catalogo.Application.ViewModels;
 using NerdStore.Catalogo.Domain;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace NerdStore.Catalogo.Application.AutoMapper
 {

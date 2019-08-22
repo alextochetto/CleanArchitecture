@@ -1,7 +1,5 @@
-﻿using NerdStore.Core.DomainObjects;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
+using NerdStore.Core.DomainObjects;
 
 namespace NerdStore.Catalogo.Domain
 {
@@ -18,12 +16,8 @@ namespace NerdStore.Catalogo.Domain
         public Dimensoes Dimensoes { get; private set; }
         public Categoria Categoria { get; private set; }
 
-        protected Produto()
-        {
-
-        }
-        public Produto(string nome, string descricao, bool ativo, decimal valor, 
-            Guid categoriaId, DateTime dataCadastro, string imagem, Dimensoes dimensoes)
+        protected Produto() { }
+        public Produto(string nome, string descricao, bool ativo, decimal valor, Guid categoriaId, DateTime dataCadastro, string imagem, Dimensoes dimensoes)
         {
             CategoriaId = categoriaId;
             Nome = nome;
@@ -55,17 +49,20 @@ namespace NerdStore.Catalogo.Domain
 
         public void DebitarEstoque(int quantidade)
         {
-            if (quantidade < 0)
-                quantidade *= -1;
-
+            if (quantidade < 0) quantidade *= -1;
             if (!PossuiEstoque(quantidade)) throw new DomainException("Estoque insuficiente");
-
             QuantidadeEstoque -= quantidade;
         }
 
-        public void ReporEstoque(int quantidade) => QuantidadeEstoque += quantidade;
+        public void ReporEstoque(int quantidade)
+        {
+            QuantidadeEstoque += quantidade;
+        }
 
-        public bool PossuiEstoque(int quantidade) => QuantidadeEstoque >= quantidade;
+        public bool PossuiEstoque(int quantidade)
+        {
+            return QuantidadeEstoque >= quantidade;
+        }
 
         public void Validar()
         {

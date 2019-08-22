@@ -11,6 +11,7 @@ namespace NerdStore.Vendas.Application.Events
 
         public VoucherAplicadoPedidoEvent(Guid clienteId, Guid pedidoId, Guid voucherId)
         {
+            AggregateId = pedidoId;
             ClienteId = clienteId;
             PedidoId = pedidoId;
             VoucherId = voucherId;

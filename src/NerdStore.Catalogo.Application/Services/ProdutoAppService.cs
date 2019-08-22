@@ -1,11 +1,10 @@
-﻿using AutoMapper;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using AutoMapper;
 using NerdStore.Catalogo.Application.ViewModels;
 using NerdStore.Catalogo.Domain;
 using NerdStore.Core.DomainObjects;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NerdStore.Catalogo.Application.Services
 {
@@ -15,8 +14,8 @@ namespace NerdStore.Catalogo.Application.Services
         private readonly IEstoqueService _estoqueService;
         private readonly IMapper _mapper;
 
-        public ProdutoAppService(IProdutoRepository produtoRepository,
-                                 IMapper mapper,
+        public ProdutoAppService(IProdutoRepository produtoRepository, 
+                                 IMapper mapper, 
                                  IEstoqueService estoqueService)
         {
             _produtoRepository = produtoRepository;
